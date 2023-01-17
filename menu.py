@@ -2,7 +2,7 @@ from network_scan import network_scan
 from discover_sites import discover_sites
 
 def menu():
-    print("\033[91m"+"FERRAMENTAS VIANA".center(50, ' ')+"\033[0m")
+    print("\033[91m"+"TOOLS VIANA".center(50, ' ')+"\033[0m")
     print("-"*50)
     print()
     print(" "*20 + "1. Scan de rede")
