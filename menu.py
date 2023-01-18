@@ -1,5 +1,6 @@
 from network_scan import network_scan
 from discover_sites import discover_sites
+from getSiteInfo import getSite
 import os
 
 def menu():
@@ -12,15 +13,14 @@ def menu():
     print()
     print("="*width)
     center = int(columns) // 2 - len("TOOLS VIANA") // 2
-    print(" " * center + "\033[91mTOOLS VIANA\033[0m")
+    print(" " *center + "\033[91mTOOLS VIANA\033[0m")
     print("="*width)
     print()
-    print(" "*center + "1. Scan de rede")
-    print(" "*center + "2. Descobrir sites")
-    print(" "*center + "3. New Function")
-    print(" "*center + "4. New Function")
-    print(" "*center + "5. New Function")
-    print(" "*center + "6. Sair")    
+    print(" "*25 + "1. Scan de rede                 5. New Function ")
+    print(" "*25 + "2. Descobrir sites              6. New Function")
+    print(" "*25 + "3. Resolver DNS                 7. New Function")
+    print(" "*25 + "4. New Function                 8. Sair")
+
     print()
     print("="*width)
     choice = input("Enter your choice: ")
@@ -29,7 +29,7 @@ def menu():
     elif choice == "2":
         discover_sites()
     elif choice == "3":
-        exit()
+        getSite()
     elif choice == "4":
         exit()
     elif choice == "5":
