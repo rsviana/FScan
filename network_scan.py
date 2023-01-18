@@ -2,8 +2,7 @@
 import socket
 import os
 
-def network_scan():
-    os.system('clear')
+def network_scan(): 
     # Get IP range from user input
     start_ip = input("Enter the starting IP address: ")
     end_ip = input("Enter the ending IP address: ")

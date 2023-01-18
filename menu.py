@@ -1,6 +1,7 @@
 from network_scan import network_scan
 from discover_sites import discover_sites
 from getSiteInfo import getSite
+from wlist import generate_wordlist
 import os
 
 def menu():
@@ -19,7 +20,7 @@ def menu():
     print(" "*25 + "1. Scan de rede                 5. New Function ")
     print(" "*25 + "2. Descobrir sites              6. New Function")
     print(" "*25 + "3. Resolver DNS                 7. New Function")
-    print(" "*25 + "4. New Function                 8. Sair")
+    print(" "*25 + "4. Gerar Wordlist               8. Sair")
 
     print()
     print("="*width)
@@ -31,7 +32,9 @@ def menu():
     elif choice == "3":
         getSite()
     elif choice == "4":
-        exit()
+        length = int(input("Enter word length: "))
+        num_words = int(input("Enter the number of words: "))
+        generate_wordlist(length, num_words)
     elif choice == "5":
         exit()
     elif choice == "6":
@@ -39,3 +42,7 @@ def menu():
     else:
         print("Invalid choice. Try again.")
         menu()
+
+
+        
+
