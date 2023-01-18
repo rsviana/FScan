@@ -1,5 +1,4 @@
 # network_scan.py
-
 import socket
 import os
 
@@ -32,3 +31,8 @@ def network_scan():
         ip = f"{start_ip_parts[0]}.{start_ip_parts[1]}.{start_ip_parts[2]}.{i}"
         for port in ports:
             port_scanner(ip, port)
+    print()
+    input("Press any key to return menu")
+    os.system('python main.py') 
+                    
+  

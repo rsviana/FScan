@@ -534,6 +534,7 @@ entrar/
 entrar.html
 entrar.php
 ezsqliteadmin/
+ftp
 fileadmin/
 fileadmin.
 fileadmin.asp
@@ -878,6 +879,8 @@ sysadmins/
 system_administration/
 system-administration/
 typo3/
+tool
+tools
 ur-admin/
 ur-admin.
 ur-admin.asp
@@ -962,6 +965,7 @@ webadmin.php
 webmaster/
 webmaster.
 webmaster.%EXT%
+webmail
 websvn/
 wizmysqladmin/
 wp-admin/

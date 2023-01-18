@@ -1,18 +1,28 @@
 from network_scan import network_scan
 from discover_sites import discover_sites
+import os
 
 def menu():
-    print("\033[91m"+"TOOLS VIANA".center(50, ' ')+"\033[0m")
-    print("-"*50)
+
+    width, height = os.get_terminal_size()
+    os.system('clear')
+
+    rows, columns = os.popen('stty size', 'r').read().split()
     print()
-    print(" "*20 + "1. Scan de rede")
-    print(" "*20 + "2. Descobrir sites")
-    print(" "*20 + "3. Sair")
-    print(" "*20 + "4. Sair")
-    print(" "*20 + "5. Sair")
-    print(" "*20 + "6. Sair")    
     print()
-    print("-"*50)
+    print("="*width)
+    center = int(columns) // 2 - len("TOOLS VIANA") // 2
+    print(" " * center + "\033[91mTOOLS VIANA\033[0m")
+    print("="*width)
+    print()
+    print(" "*center + "1. Scan de rede")
+    print(" "*center + "2. Descobrir sites")
+    print(" "*center + "3. New Function")
+    print(" "*center + "4. New Function")
+    print(" "*center + "5. New Function")
+    print(" "*center + "6. Sair")    
+    print()
+    print("="*width)
     choice = input("Enter your choice: ")
     if choice == "1":
         network_scan()
