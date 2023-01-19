@@ -7,5 +7,5 @@ All functions have been and will be tested in real environments. The one with a 
 Feel free to contribute however you want, and/or modify the code according to your needs.
 Every contribution will be evaluated.
 
-### Alert: You need to have a wordlist for the 2. Descobrir sites function to work.
+### Alert: You need to have a wordlist for the "2. Descobrir sites" function to work.
 > In addition to having the modules installed
