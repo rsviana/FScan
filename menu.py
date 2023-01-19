@@ -48,7 +48,6 @@ def menu():
         hIp = input("Enter IP Host: ")
         hUser = input("Username host: ")
         hPass = input("Password Host: ")
-        #hcommand = input("Enter command: ")
         ssh_command(hIp,hUser,hPass)
     elif choice == "6":
         host = input("Enter the host to scan: ")
