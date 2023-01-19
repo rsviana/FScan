@@ -4,7 +4,7 @@ from getSiteInfo import getSite
 from wlist import generate_wordlist
 from ssh import ssh_command
 from scan_nmap import scan_port
-import os
+import os, getpass
 
 def menu():
 
@@ -47,7 +47,8 @@ def menu():
     elif choice == "5":
         hIp = input("Enter IP Host: ")
         hUser = input("Username host: ")
-        hPass = input("Password Host: ")
+        nPass = getpass.getpass()
+        hPass = input("Password host: ",hPass)
         ssh_command(hIp,hUser,hPass)
     elif choice == "6":
         host = input("Enter the host to scan: ")
