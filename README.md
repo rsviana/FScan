@@ -9,3 +9,7 @@ Every contribution will be evaluated.
 
 ### Alert: You need to have a wordlist for the "2. Descobrir sites" function to work.
 > In addition to having the modules installed
+
+### Required libraries, install pip (in Windows)
+> - paramiko
+> - dnspython

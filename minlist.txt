@@ -3,3 +3,4 @@ teste
 rapido
 scan
 user
+robots.txt
