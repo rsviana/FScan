@@ -1,2 +1,5 @@
-result.html
 *.txt
+location.py
+__pycache__/location.cpython-39.pyc
+__pycache__/menu.cpython-39.pyc
+__pycache__/scan_nmap.cpython-39.pyc
