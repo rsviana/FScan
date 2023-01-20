@@ -28,7 +28,8 @@ def menu():
     print(" "*25 + "1. Network Scan                       5. Client SSH ")
     print(" "*25 + "2. Subdomain Find                     \033[91m6. NMAP\033[0m")
     print(" "*25 + "3. Active IPs                         7. DNS Find")
-    print(" "*25 + "\033[91m4. Wordlist Generator\033[0m" +"                 8. Sair")
+    print(" "*25 + "\033[91m4. Wordlist Generator\033[0m" +"                 8. ---")
+    print(" "*25 + "0. Sair")
     print()
     print()
     print()
@@ -60,6 +61,9 @@ def menu():
     elif choice == "7":
         getSite()
     elif choice == "8":
+        Whost = ("Enter the host from whois: ")
+        whois_lookup(Whost)        
+    elif choice == "0":
         exit() 
     else:
         print("Invalid choice. Try again.")
