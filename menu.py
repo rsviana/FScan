@@ -47,8 +47,7 @@ def menu():
     elif choice == "5":
         hIp = input("Enter IP Host: ")
         hUser = input("Username host: ")
-        nPass = getpass.getpass()
-        hPass = input("Password host: ",hPass)
+        hPass = getpass.getpass("Password host: ")
         ssh_command(hIp,hUser,hPass)
     elif choice == "6":
         host = input("Enter the host to scan: ")
@@ -57,8 +56,6 @@ def menu():
         print("The state of port {} on host {} is: {}".format(port, host, result))
     elif choice == "8":
         exit() 
-
-
     else:
         print("Invalid choice. Try again.")
         menu()
