@@ -10,6 +10,6 @@ def find_active_ips(start_ip, end_ip):
             print("\033[92m" + f"{ip} is active"+ "\033[0m")
         else:
             print("\033[91m"+f"{ip} is inactive"+"\033[0m")
-    
+
     input("Press any key to return menu")
     os.system('python main.py') 
