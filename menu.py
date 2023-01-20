@@ -4,6 +4,7 @@ from getSiteInfo import getSite
 from wlist import generate_wordlist
 from ssh import ssh_command
 from scan_nmap import scan_port
+from ipActive import find_active_ips
 import os, getpass
 
 def menu():
@@ -25,8 +26,8 @@ def menu():
     print()
     print()
     print(" "*25 + "1. Network Scan                       5. Client SSH ")
-    print(" "*25 + "2. URL Find                           \033[91m6. NMAP\033[0m")
-    print(" "*25 + "3. DNS Find                           7. New Function")
+    print(" "*25 + "2. Subdomain Find                     \033[91m6. NMAP\033[0m")
+    print(" "*25 + "3. Active IPs                         7. DNS Find")
     print(" "*25 + "\033[91m4. Wordlist Generator\033[0m" +"                 8. Sair")
     print()
     print()
@@ -39,7 +40,9 @@ def menu():
     elif choice == "2":
         discover_sites()
     elif choice == "3":
-        getSite()
+        BeginIP = input("Enter the starting IP address: ")
+        EndIp = input("Enter the ending IP address: ")
+        find_active_ips(BeginIP, EndIp)
     elif choice == "4":
         length = int(input("Enter word length: "))
         num_words = int(input("Enter the number of words: "))
@@ -54,6 +57,8 @@ def menu():
         port = input("Enter the port to scan: ")
         result = scan_port(host, port)
         print("The state of port {} on host {} is: {}".format(port, host, result))
+    elif choice == "7":
+        getSite()
     elif choice == "8":
         exit() 
     else:
