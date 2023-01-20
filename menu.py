@@ -5,6 +5,7 @@ from wlist import generate_wordlist
 from ssh import ssh_command
 from scan_nmap import scan_port
 from ipActive import find_active_ips
+from location import get_location
 import os, getpass
 
 def menu():
@@ -25,7 +26,7 @@ def menu():
     print()
     print()
     print()
-    print(" "*25 + "1. Network Scan                       5. Client SSH ")
+    print(" "*25 + "1. Network Scan                       5. Client SSH                 9. My Location")
     print(" "*25 + "2. Subdomain Find                     6. NMAP")
     print(" "*25 + "3. Active IPs                         7. DNS Find")
     print(" "*25 + "\033[91m4. Wordlist Generator\033[0m" +"                 8. ---")
@@ -63,6 +64,8 @@ def menu():
     elif choice == "8":
         Whost = ("Enter the host from whois: ")
         #whois_lookup(Whost)        
+    elif choice == "9":
+        get_location()
     elif choice == "0":
         exit() 
     else:
