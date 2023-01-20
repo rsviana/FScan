@@ -62,7 +62,7 @@ def menu():
         getSite()
     elif choice == "8":
         Whost = ("Enter the host from whois: ")
-        whois_lookup(Whost)        
+        #whois_lookup(Whost)        
     elif choice == "0":
         exit() 
     else:
