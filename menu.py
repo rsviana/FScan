@@ -26,7 +26,7 @@ def menu():
     print()
     print()
     print(" "*25 + "1. Network Scan                       5. Client SSH ")
-    print(" "*25 + "2. Subdomain Find                     \033[91m6. NMAP\033[0m")
+    print(" "*25 + "2. Subdomain Find                     6. NMAP")
     print(" "*25 + "3. Active IPs                         7. DNS Find")
     print(" "*25 + "\033[91m4. Wordlist Generator\033[0m" +"                 8. ---")
     print(" "*25 + "0. Sair")
@@ -55,7 +55,7 @@ def menu():
         ssh_command(hIp,hUser,hPass)
     elif choice == "6":
         host = input("Enter the host to scan: ")
-        port = input("Enter the port to scan: ")
+        port = int(input("Enter the port to scan: "))
         result = scan_port(host, port)
         print("The state of port {} on host {} is: {}".format(port, host, result))
     elif choice == "7":
