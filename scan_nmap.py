@@ -1,4 +1,6 @@
 import scan_nmap
+# em desenvolvimento....
+
 
 def scan_port(ip, port):
     nm = scan_nmap.PortScanner()
